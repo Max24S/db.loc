@@ -1,7 +1,7 @@
 <?php
-require_once('models/users.class.php');
+require_once('models/news.class.php');
 
-$cityClass = new Users();
+$cityClass = new News();
 
 $id = $_GET['id'];
 
