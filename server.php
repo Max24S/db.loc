@@ -7,8 +7,8 @@ $requestClass = new Request();
         if( $requestClass->isPost() ){
 
                 if ($_POST['action'] == 'add') {
-                    require_once('models/users.class.php');
-                    $User = new Users();
+                    require_once('models/news.class.php');
+                    $User = new News();
                     $requestClass->required('title');
                     $requestClass->required('annotation');
                     $requestClass->required('content');
@@ -33,8 +33,8 @@ $requestClass = new Request();
                 }
                 if($_POST['action'] == 'edit')
                 {
-                      require_once('models/users.class.php');
-                      $cityClass = new Users();
+                      require_once('models/news.class.php');
+                      $cityClass = new News();
 //                      $isDublicate=$cityClass->idDublicate($_POST['id'],trim($_POST['title']));
                     $result = $cityClass->update(['id'=>trim($_POST['id']),'name'=>trim($_POST['city'])]);
                       $status = 'error';
@@ -47,7 +47,7 @@ $requestClass = new Request();
         }
 //        if ($_POST['action'] == 'add') {
 //
-//            require_once('models/users.class.php');
+//            require_once('models/news.class.php');
 //
 //            $User = new Users();
 //
