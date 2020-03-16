@@ -1,8 +1,8 @@
 <?php 
-require_once('models/users.class.php');
+require_once('models/news.class.php');
 
-$Users = new Users();
-$news = $Users->get_all();
+$News = new News();
+$news = $News->get_all();
 
 ?>
 <p><a href="addNews.php">Добавить новый город</a></p>
